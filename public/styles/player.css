@@ -1,0 +1,9 @@
+button {
+    display: block;
+    width: 100%;
+    font-size: 100px;
+}
+
+button.current {
+    background-color: pink;
+}
