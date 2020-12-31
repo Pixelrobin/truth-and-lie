@@ -34,7 +34,7 @@ function setVisibleState(state) {
 }
 
 function updateGameState(data) {
-    if (data.state === 1 && lastGameId !== data.gameId) {
+    if (data.gameId && data.state === 1 && lastGameId !== data.gameId) {
         gameRunning = true;
         lastGameId = data.gameId;
     }
