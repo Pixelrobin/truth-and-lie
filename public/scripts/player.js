@@ -1,5 +1,4 @@
 const buttons = document.querySelectorAll('button');
-console.log(buttons);
 
 function setDisabled(disabled) {
     for (const button of buttons) {
@@ -13,7 +12,7 @@ function setCurrentButton(choice) {
         existing.classList.remove('current');
     }
 
-    const current = document.querySelector('[data-choice=' + choice + '}]');
+    const current = document.querySelector('[data-choice="' + choice + '"]');
     if (current) {
         current.classList.add('current');
     }
@@ -31,7 +30,7 @@ function sendChoice(e) {
         headers: {
             'Content-Type': 'application/json'
         }
-    })
+    });
     
     request
         .then(res => res.json())

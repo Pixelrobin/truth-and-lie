@@ -1,0 +1,49 @@
+body {
+    font-size: 24px;
+    padding: 24px;
+    font-family: sans-serif;
+}
+
+input[type=text], input[type=number] {
+    font-size: inherit;
+    padding: 0.5em;
+    width: 100%;
+    display: block;
+    margin-bottom: 8px;
+}
+
+label {
+    display: block;
+}
+
+.form-field {
+    margin-bottom: 16px;
+}
+
+button, input[type=submit] {
+    font-size: inherit;
+    padding: 0.5em;
+}
+
+hr {
+    margin: 32px 0;
+}
+
+form {
+    margin: 32px 0;
+}
+
+dl {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    column-gap: 1em;
+}
+
+dt {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+dd {
+    margin: 0;
+}

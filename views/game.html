@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truth & Lie</title>
+    <script src="/socket.io.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cinzel:wght@900" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/game.css">
+</head>
+<body>
+    <div class="container score-container" hidden data-game-state="0">
+        <div class="bound-text score-text" id="score-text">Top Scores</div>
+        <ol class="scores" id="scores"></ol>
+    </div>
+    <div class="container game-container" hidden data-game-state="1">
+        <div class="bound-text">Which is the truth?</div>
+        <div class="game-choices">
+            <div class="label">Choice A</div>
+            <div class="choice" data-game-data="a"></div>
+            <div class="spacer"></div>
+            <div class="label">Choice B</div>
+            <div class="choice" data-game-data="b"></div>
+        </div>
+        <div class="bound-text">Vote on your devices</div>
+    </div>
+    <div class="container result-truth-container" hidden data-game-state="2">
+        <div class="label">The truth is</div>
+        <div class="choice" data-game-data="result"></div>
+    </div>
+    <div class="container result-fooled-container" hidden data-game-state="3">
+        <div class="label">Table <span data-game-data="table"></span> fooled</div>
+        <div class="huge"><span data-game-data="percent"></span>%</div>
+    </div>
+    <div class="container" data-game-state="-1"></div>
+    <script type="module" src="/scripts/game.js"></script>
+</body>
+</html>

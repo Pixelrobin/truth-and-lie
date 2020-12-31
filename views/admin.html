@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truth & Lie Admin</title>
+    <script src="/socket.io.min.js"></script>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/admin.css">
+</head>
+<body>
+    <h1>Truth & Lie Admin</h1>
+
+    <form action="/start" id="form">
+        <fieldset>
+            <legend>Game</legend>
+
+            <dl>
+                <dt>Time:</dt>
+                <dd data-game-data="time"></dd>
+                <dt>Table:</dt>
+                <dd data-game-data="table"></dd>
+                <dt>Choice A:</dt>
+                <dd data-game-data="a"></dd>
+                <dt>Choice B:</dt>
+                <dd data-game-data="b"></dd>
+            </dl>
+
+            <div class="form-field">
+                <label for="table">Table Number</label>
+                <input type="number" name="table" id="table" required>
+            </div>
+            <div class="form-field">
+                <label for="a">A</label>
+                <input type="text" name="a" id="a" required>
+            </div>
+            <div class="form-field">
+                <label for="b">B</label>
+                <input type="text" name="b" id="b" required>
+            </div>
+            <input type="submit" value="Set Question">
+        </fieldset>
+    </form>
+
+    <form action="/result">
+        <fieldset>
+            <legend>Result</legend>
+
+            <dl>
+                <dt>Total Choices:</dt>
+                <dd data-game-data="totalChoices"></dd>
+                <dt>A Count:</dt>
+                <dd data-game-data="aCount"></dd>
+                <dt>B Count:</dt>
+                <dd data-game-data="bCount"></dd>
+            </dl>
+
+            <div class="form-field">
+                <label for="a">Full A</label>
+                <input type="text" name="a" id="a" required>
+            </div>
+            <div class="form-field">
+                <label for="b">Full B</label>
+                <input type="text" name="b" id="b" required>
+            </div>
+
+            <div class="form-field">
+                <label><input type="radio" name="result" value="a" required> Truth is A</label>
+                <label><input type="radio" name="result" value="b" required> Truth is B</label>
+            </div>
+
+            <input type="submit" value="Show Result">
+        </fieldset>
+    </form>
+
+    <form action="/end">
+        <fieldset>
+            <legend>Fooled</legend>
+
+            <dl>
+                <dt>Result:</dt>
+                <dd data-game-data="result"></dd>
+
+                <dt>Percent:</dt>
+                <dd data-game-data="percent"></dd>
+            </dl>
+
+            <input type="submit" value="Show Fooled">
+        </fieldset>
+    </form>
+
+    <button id="clear">Clear</button>
+
+    <script type="module" src="/scripts/admin.js"></script>
+</body>
+</html>
