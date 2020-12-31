@@ -1,8 +1,14 @@
+@keyframes blinker {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+
 body {
     background-color: #1d1e26;
     color: #edeadd;
     font-family: 'Archivo Black', sans-serif;
-    /* line-height: 1; */
     text-transform: uppercase;
     text-align: center;
     font-size: 30px;
@@ -104,10 +110,6 @@ body {
     margin-top: 50px;
 }
 
-.score-table {
-    opacity: 0.8;
-}
-
 .score-points {
     color: #e87054;
     font-family: 'Archivo Black', sans-serif;
@@ -116,4 +118,21 @@ body {
 .score-text {
     position: absolute;
     top: 0;
+}
+
+#interact-cover {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: black;
+    color: white;
+}
+
+.blink {
+    animation: blinker 1s step-start infinite alternate;
+    animation-delay: 1s;
 }

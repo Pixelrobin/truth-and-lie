@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="/styles/game.css">
 </head>
 <body>
+    <audio src="/sounds/bell.wav" id="audio-bell" preload="auto"></audio>
+
     <div class="container score-container" hidden data-game-state="0">
         <div class="bound-text score-text" id="score-text">Top 3 Scores</div>
         <ol class="scores" id="scores"></ol>
@@ -35,6 +37,7 @@
         <div class="huge"><span data-game-data="percent"></span>%</div>
     </div>
     <div class="container" data-game-state="-1"></div>
+    <button id="interact-cover">Click to start</button>
     <script type="module" src="/scripts/game.js"></script>
 </body>
 </html>
