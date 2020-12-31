@@ -1,5 +1,14 @@
 const buttons = document.querySelectorAll('button');
 
+let timeout = -1;
+
+function resetCurrent() {
+    const existing = document.querySelectorAll('.current');
+    for (const element of existing) {
+        element.classList.remove('current');
+    }
+}
+
 function setDisabled(disabled) {
     for (const button of buttons) {
         disabled ? button.setAttribute('disabled', true) : button.removeAttribute('disabled');
@@ -7,10 +16,7 @@ function setDisabled(disabled) {
 }
 
 function setCurrentButton(choice) {
-    const existing = document.querySelector('.current');
-    if (existing) {
-        existing.classList.remove('current');
-    }
+    resetCurrent();
 
     const current = document.querySelector('[data-choice="' + choice + '"]');
     if (current) {
@@ -35,8 +41,16 @@ function sendChoice(e) {
     request
         .then(res => res.json())
         .then(data => {
-            setCurrentButton(data.choice)
             setDisabled(false);
+            resetCurrent();
+
+            if ('error' in data) return;
+
+            if (data.remaining) {
+                setCurrentButton(data.choice);
+                clearTimeout(timeout);
+                timeout = setTimeout(resetCurrent, data.remaining * 1000)
+            }
         })
 }
 

@@ -92,23 +92,25 @@ body {
 .scores {
     display: inline-block;
     text-align: left;
-    /* font-family: 'Cinzel', serif; */
     font-size: 50px;
     letter-spacing: 0.1em;
     margin: 0;
     padding: 0;
     padding-left: 75px;
+    line-height: 1;
 }
 
 .scores li + li {
     margin-top: 50px;
 }
 
+.score-table {
+    opacity: 0.8;
+}
+
 .score-points {
     color: #e87054;
     font-family: 'Archivo Black', sans-serif;
-    font-size: 20px;
-    letter-spacing: 0.15em;
 }
 
 .score-text {

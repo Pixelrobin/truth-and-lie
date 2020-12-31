@@ -35,8 +35,9 @@ function updateGameState(data) {
 
 function updateScores(data) {
     const scores = data.scores;
+    console.log(data);
     const html = scores
-        .map(score => `<li><div class="score-table">Table ${ score.table }</div><div class="score-points">${ score.score } points</div></li>`)
+        .map(score => `<li><div class="score-table">Table ${ score.table }</div><div class="score-points">${ score.score }%</div></li>`)
         .join('');
     scoreElement.innerHTML = html;
     scoreTextElement.style.display = data.showScores ? 'block' : 'none';
