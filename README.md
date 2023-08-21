@@ -10,8 +10,8 @@ This is purposefully built to be super simple. I didn't have a lot of time and I
 
 1. To start, several tables pick someone who has a good "Truth and Lie" question. Kinda like the classic "Two truths and a lie" but with just one of each.
 2. Each table then takes turns sending their person on stage where they can share their question with the crowd. For example the question could be "I've been to disneyland twice" or "I've never been to a dentist", which is true?
-3. The crowd members use their phones to go to the URL where the game is hosted and vote for which statement made before a timer runs out.
-4. At the end the person on stage reveals the answer and the table playing automatically gets points based on how many people the fooled
+3. The crowd members use their phones to go to the URL where the game is hosted and vote for which statement made is true before a timer runs out.
+4. At the end the person on stage reveals the answer and the table they represent automatically gets points based on the percentage of people they fooled.
 5. At the end of all the rounds the table with the greatest amount of points wins
 
 ## Getting Started
