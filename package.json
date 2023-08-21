@@ -6,7 +6,8 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js --config nodemon.json"
+    "dev": "nodemon index.js --config nodemon.json",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
